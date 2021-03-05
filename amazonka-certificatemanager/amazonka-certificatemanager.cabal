@@ -1,5 +1,5 @@
 name:                  amazonka-certificatemanager
-version:               1.6.1
+version:               1.6.2
 synopsis:              Amazon Certificate Manager SDK.
 homepage:              https://github.com/brendanhay/amazonka
 bug-reports:           https://github.com/brendanhay/amazonka/issues

@@ -286,20 +286,20 @@ instance FromText KeyAlgorithm where
         "ec_prime256v1" -> pure EcPRIME256V1
         "ec_secp384r1" -> pure EcSECP384R1
         "ec_secp521r1" -> pure EcSECP521R1
-        "rsa_1024" -> pure Rsa1024
-        "rsa_2048" -> pure Rsa2048
-        "rsa_4096" -> pure Rsa4096
+        "rsa-1024" -> pure Rsa1024
+        "rsa-2048" -> pure Rsa2048
+        "rsa-4096" -> pure Rsa4096
         e -> fromTextError $ "Failure parsing KeyAlgorithm from value: '" <> e
-           <> "'. Accepted values: ec_prime256v1, ec_secp384r1, ec_secp521r1, rsa_1024, rsa_2048, rsa_4096"
+           <> "'. Accepted values: ec_prime256v1, ec_secp384r1, ec_secp521r1, rsa-1024, rsa-2048, rsa-4096"
 
 instance ToText KeyAlgorithm where
     toText = \case
         EcPRIME256V1 -> "EC_prime256v1"
         EcSECP384R1 -> "EC_secp384r1"
         EcSECP521R1 -> "EC_secp521r1"
-        Rsa1024 -> "RSA_1024"
-        Rsa2048 -> "RSA_2048"
-        Rsa4096 -> "RSA_4096"
+        Rsa1024 -> "RSA-1024"
+        Rsa2048 -> "RSA-2048"
+        Rsa4096 -> "RSA-4096"
 
 instance Hashable     KeyAlgorithm
 instance NFData       KeyAlgorithm

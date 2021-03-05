@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    stackYaml: "stack.yaml"
+    components:
+      - path: "./gen"
+        component: "amazonka-certificatemanager:lib"
+      - path: "./test"
+        component: "amazonka-certificatemanager:test:amazonka-certificatemanager-test"
